@@ -118,6 +118,7 @@ func (r *Repository) RemoveSubscription(username string, employeeID int) {
 	for i, sub := range subs {
 		if sub == employeeID {
 			r.subscriptions[username] = append(subs[:i], subs[i+1:]...)
+			fmt.Printf("%s Отписался от %s\n", username, r.employeeStore[employeeID].Name)
 			break
 		}
 	}

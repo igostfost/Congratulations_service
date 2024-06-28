@@ -7,13 +7,10 @@ import (
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strconv"
-	"sync"
 	"time"
 )
 
 var jwtKey = []byte("secret_key")
-var subscriptions = make(map[string][]int)
-var mu sync.RWMutex
 
 type Claims struct {
 	Username string `json:"username"`
