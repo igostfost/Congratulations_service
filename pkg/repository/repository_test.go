@@ -100,7 +100,4 @@ func TestSendNotifications(t *testing.T) {
 	repo.AddSubscription("Bob", 1)
 
 	repo.sendNotifications(model.Employee{ID: 1, Name: "Alice", Birthday: now})
-
-	// Здесь нужно проверить вывод, например, используя логирование или другой способ,
-	// чтобы убедиться, что уведомления отправлены
 }
